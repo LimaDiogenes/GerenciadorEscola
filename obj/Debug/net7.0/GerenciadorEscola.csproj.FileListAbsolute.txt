@@ -1,0 +1,15 @@
+/workspaces/GerenciadorEscola/bin/Debug/net7.0/GerenciadorEscola
+/workspaces/GerenciadorEscola/bin/Debug/net7.0/GerenciadorEscola.deps.json
+/workspaces/GerenciadorEscola/bin/Debug/net7.0/GerenciadorEscola.runtimeconfig.json
+/workspaces/GerenciadorEscola/bin/Debug/net7.0/GerenciadorEscola.dll
+/workspaces/GerenciadorEscola/bin/Debug/net7.0/GerenciadorEscola.pdb
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.csproj.AssemblyReference.cache
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.AssemblyInfoInputs.cache
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.AssemblyInfo.cs
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.csproj.CoreCompileInputs.cache
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.dll
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/refint/GerenciadorEscola.dll
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.pdb
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/GerenciadorEscola.genruntimeconfig.cache
+/workspaces/GerenciadorEscola/obj/Debug/net7.0/ref/GerenciadorEscola.dll

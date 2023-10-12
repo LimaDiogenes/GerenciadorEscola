@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6964+Ai8QBmLMu/4LzlS8rnYE1OgcXv7pRVjpt8CObCuT3OzLglA6X3+qWPa5VTd+eBJvou4wJIs1NbhnWbEjA==",
+  "dgSpecHash": "ooticZrNpfTMLV7nD5n2F3mODmcAz8qBjqyesRpIgXJHs/tGzTLjrlsTck6K4T75GsO2wP1pTjxWVQt0eQ/TgA==",
   "success": true,
   "projectFilePath": "/workspaces/GerenciadorEscola/GerenciadorEscola.csproj",
-  "expectedPackageFiles": [
-    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/6.0.20/microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.20/microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.20/microsoft.netcore.app.host.linux-x64.6.0.20.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
