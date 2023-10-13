@@ -1,4 +1,5 @@
-﻿namespace GerenciadorEscola
+﻿using System;
+namespace GerenciadorEscola
 {
   internal class Program
   {
@@ -18,7 +19,20 @@ Crie testes na main. Não é necessário criar um menu e sim objetos que acionem
 */
     internal static void Main()
     {
-
+      while (true)
+      {
+        Janela janela1 = new(true);
+        Janela m1 = new();
+        m1.Linha1 = "Teste1";
+        m1.Linha4 = "Teste4";
+        m1.ImprimirJanela(25, 15, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkBlue);
+        Console.ReadLine();
+        Janela m2 = new();
+        m2.Linha2 = "Teste2";
+        m2.Linha3 = "Teste3";
+        m2.ImprimirJanela(27, 9, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkRed);
+        Console.ReadLine();
+      }
     }
   }
 }

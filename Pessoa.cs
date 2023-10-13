@@ -32,22 +32,22 @@
         /// <param name="dataNascimento"></param>
         /// <param name="dataContratacao"></param>
         /// <param name="salario"></param>
-        internal Idade(string nome, string sobrenome, DateOnly dataNascimento)
-        {
-            Matricula = Escola.GerarMatricula(); // método verifica primeiro número disponível e retorna como matrícula
-            Nome = nome.ToUpper();
-            Sobrenome = sobrenome.ToUpper();
-            DataNascimento = dataNascimento:       
-            DateOnly hoje = DateOnly.FromDateTime(DateTime.Now);
-            Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
-            if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
-            {
-                Idade--;
-            }
-            if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
-            {
-                Idade--; // caso ainda não fez, diminui 1 da idade
-            }            
-        }        
+        // internal void SetIdade(string nome, string sobrenome, DateOnly dataNascimento)
+        // {
+        //     Matricula = Escola.GerarMatricula(); // método verifica primeiro número disponível e retorna como matrícula
+        //     Nome = nome.ToUpper();
+        //     Sobrenome = sobrenome.ToUpper();
+        //     DataNascimento = dataNascimento;       
+        //     DateOnly hoje = DateOnly.FromDateTime(DateTime.Now);
+        //     Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
+        //     if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
+        //     {
+        //         Idade--;
+        //     }
+        //     if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
+        //     {
+        //         Idade--; // caso ainda não fez, diminui 1 da idade
+        //     }            
+        // }        
     }
 }
