@@ -22,15 +22,26 @@ Crie testes na main. Não é necessário criar um menu e sim objetos que acionem
       while (true)
       {
         Janela janela1 = new(true);
+        
+        Janela inicial = new(false);
+        char opcao = inicial.MenuInicial();
+
         Janela m1 = new();
-        m1.Linha1 = "Teste1";
-        m1.Linha4 = "Teste4";
+        m1.Linha1 = $"{opcao}";
+        m1.Linha3 = "Teste3";
         m1.ImprimirJanela(25, 15, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkBlue);
         Console.ReadLine();
-        Janela m2 = new();
+
+        Janela m2 = new(true);
         m2.Linha2 = "Teste2";
         m2.Linha3 = "Teste3";
-        m2.ImprimirJanela(27, 9, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkRed);
+        m2.ImprimirJanela(5, 2, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkRed);
+        Console.ReadLine();
+
+        Janela m3 = new();
+        m3.Linha2 = "Teste1112";
+        m3.Linha3 = "Teste1113";
+        m3.ImprimirJanela(15, 7, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkGreen);
         Console.ReadLine();
       }
     }
