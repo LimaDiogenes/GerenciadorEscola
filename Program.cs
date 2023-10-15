@@ -19,31 +19,19 @@ Crie testes na main. Não é necessário criar um menu e sim objetos que acionem
 */
     internal static void Main()
     {
-      while (true)
-      {
-        Janela janela1 = new(true);
-        
-        Janela inicial = new(false);
-        char opcao = inicial.MenuInicial();
+            // Criando três alunos
+            Aluno aluno1 = new Aluno { Nome = "João", Idade = 20, Matricula = 123456 };
+            aluno1.DefinirStatus(false);
 
-        Janela m1 = new();
-        m1.Linha1 = $"{opcao}";
-        m1.Linha3 = "Teste3";
-        m1.ImprimirJanela(25, 15, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkBlue);
-        Console.ReadLine();
+            Aluno aluno2 = new Aluno { Nome = "Maria", Idade = 22, Matricula = 654321 };
+            aluno2.DefinirStatus(true);
 
-        Janela m2 = new(true);
-        m2.Linha2 = "Teste2";
-        m2.Linha3 = "Teste3";
-        m2.ImprimirJanela(5, 2, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkRed);
-        Console.ReadLine();
+            Aluno aluno3 = new Aluno { Nome = "Pedro", Idade = 19, Matricula = 789012 };
+            aluno3.DefinirStatus(true);
 
-        Janela m3 = new();
-        m3.Linha2 = "Teste1112";
-        m3.Linha3 = "Teste1113";
-        m3.ImprimirJanela(15, 7, boxWidth: 20, boxHeight: 7, corFundo: ConsoleColor.DarkGreen);
-        Console.ReadLine();
-      }
-    }
+            aluno1.Imprimir(); aluno2.Imprimir(); aluno3.Imprimir();
+
+
+        }
   }
 }

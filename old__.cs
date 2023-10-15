@@ -1,6 +1,6 @@
 ﻿namespace GerenciadorEscola
 {
-    internal class Janela
+    internal class old__
     {
         //Variaveis para criação e manipulação da Tela, dividido em 25 linhas.
         internal string Linha1 { get; set; } = "";
@@ -36,7 +36,7 @@
         /// construtor cria janela, em branco, cria margens da tela principal se inicial == true
         /// Altura máxima = 25 (margens superior e inferior não são contabilizadas)
         /// </summary>
-        internal Janela(bool margens = false, int width = 100, int height = 25)
+        internal old__(bool margens = false, int width = 100, int height = 25)
         {
             if (margens)
             {
@@ -59,7 +59,7 @@
         /// <returns>char</returns>
         internal char MenuInicial()
         {
-            Janela init = new();
+            old__ init = new();
             Console.ForegroundColor = ConsoleColor.White; // ajusta cor
             init.Linha3 = "Gerenciador da Escola 'SchoolName'";
             init.Linha7 = SubstituirPalavras(sep:'=', width:Width-4, starter:' ', ends:' ');

@@ -2,52 +2,64 @@
 {
     internal class Pessoa
     {
-        internal int Matricula { get; private set; } 
-        internal string Nome { get; private set; }
-        internal string Sobrenome { get; private set; }
-        internal DateOnly DataNascimento { get; private set; }        
-        internal int Idade { get; private set; }
+        internal int Matricula { get; set; } 
+        internal string Nome { get; set; }        
+        internal DateTime DataNascimento { get; set; }        
+        internal int Idade { get; set; }
+        internal bool Status { get; set; }
+
+        internal Pessoa(int matricula, string nome, DateTime dataNascimento)
+        {
+            DataNascimento = dataNascimento;
+            Matricula = matricula;
+            Nome = nome;
+
+            DateTime hoje = DateTime.Now;
+            Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
+            if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
+            {
+                Idade--;
+            }
+            if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
+            {
+                Idade--; // caso ainda não fez, diminui 1 da idade
+            }
+        }
+
+        internal virtual void Imprimir()
+        {
+            Console.WriteLine($"Matrícula: {Matricula}");
+            Console.WriteLine($"Nome: {Nome}");
+            Console.WriteLine($"Data de nascimento: {DataNascimento.Day/DataNascimento.Month/DataNascimento.Year}");
+            Console.WriteLine($"Idade: {Idade}");
+            if (Status)
+            Console.WriteLine($"Status: Ativo");
+            else
+            {
+                Console.WriteLine($"Status: Inativo");
+            }
+        }
+
+        internal void AlterarDados(int matricula, string nome, DateTime dataNascimento, bool status)
+        {
+            Matricula = matricula;
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            Status = status;
+            DateTime hoje = DateTime.Now;
+            Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
+            if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
+            {
+                Idade--;
+            }
+            if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
+            {
+                Idade--; // caso ainda não fez, diminui 1 da idade
+            }
+        }
 
 
-// > professores
-        // internal double salario = 1320.00d; // valor do salario minimo
-        // internal double Salario
-        // {
-        //     get
-        //     { return salario; }
-        //     private set // checando para permitir atribuir o novo valor apenas se for > minimo.
-        //     {
-        //         if (value > salario)
-        //         {
-        //             salario = value;
-        //         }
-        //     }
-        // }
 
-        /// <summary>
-        /// construtor1 - dados completos
-        /// </summary>
-        /// <param name="nome"></param>
-        /// <param name="sobrenome"></param>
-        /// <param name="dataNascimento"></param>
-        /// <param name="dataContratacao"></param>
-        /// <param name="salario"></param>
-        // internal void SetIdade(string nome, string sobrenome, DateOnly dataNascimento)
-        // {
-        //     Matricula = Escola.GerarMatricula(); // método verifica primeiro número disponível e retorna como matrícula
-        //     Nome = nome.ToUpper();
-        //     Sobrenome = sobrenome.ToUpper();
-        //     DataNascimento = dataNascimento;       
-        //     DateOnly hoje = DateOnly.FromDateTime(DateTime.Now);
-        //     Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
-        //     if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
-        //     {
-        //         Idade--;
-        //     }
-        //     if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
-        //     {
-        //         Idade--; // caso ainda não fez, diminui 1 da idade
-        //     }            
-        // }        
+
     }
 }
