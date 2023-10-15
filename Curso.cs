@@ -6,6 +6,7 @@ internal class Curso
     internal string Codigo { get; set; }
     internal List<Aluno> Alunos { get; set; }
     internal List<Disciplina> Disciplinas { get; set; }
+    internal List<Professor> Professores { get; set; }
     internal double Mensalidade { get; set; }
 
     internal Curso(string nome, string codigo, double mensalidade = 2000)
@@ -15,6 +16,7 @@ internal class Curso
         Mensalidade = mensalidade;
         Alunos = new List<Aluno>();
         Disciplinas = new List<Disciplina>();
+        Professores = new List<Professor>();
     }
 
     /// <summary>
@@ -84,7 +86,7 @@ internal class Curso
     {
         DateTime hoje = DateTime.Now;
 
-        if (hoje == pessoa.DataNascimento)
+        if (hoje.Day == pessoa.DataNascimento.Day && hoje.Month == pessoa.DataNascimento.Month)
         {
             Mensalidade -= (Mensalidade * 0.1); // Aplica um desconto de 10%
             return true;
@@ -96,5 +98,6 @@ internal class Curso
     {
         Console.WriteLine($"Código do curso: {Codigo}, Nome do curso: {Nome}");
         Console.WriteLine($"Valor da mensalidade: {Math.Round(Mensalidade,2)}");
+        Console.WriteLine("------------------------------------------");
     }
 }

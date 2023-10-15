@@ -3,23 +3,23 @@
     static internal class Escola
     {
         //  lista de alunos
-        internal static List<Aluno> listaAlunos;
+        internal static List<Aluno> listaAlunos {get; set;}
 
         // lista de cursos
-        internal static List<Curso> listaCursos;
+        internal static List<Curso> listaCursos { get; set; }
 
         //  lista de disciplinas
-        internal static List<Disciplina> listaDisciplinas;
+        internal static List<Disciplina> listaDisciplinas { get; set; }
 
         //  lista de professores
-        internal static List<Professor> listaProfessores;
+        internal static List<Professor> listaProfessores { get; set; }
 
-        static Escola()
+        internal static void Init()
         {
-            List<Aluno> listaAlunos = new();
-            List<Curso> listaCursos = new();
-            List<Disciplina> listaDisciplinas = new();
-            List<Professor> listaProfessor = new();
+            listaAlunos = new();
+            listaCursos = new();
+            listaDisciplinas = new();
+            listaProfessores = new();
         }
 
         internal static void CadastrarAluno(Aluno aluno)
@@ -40,6 +40,22 @@
         internal static void CadastrarDisciplina(Disciplina disc)
         {
             listaDisciplinas.Add(disc);
+        }
+
+        internal static void ListarAlunos()
+        {
+            foreach (Aluno aluno in  listaAlunos)
+            {                
+                aluno.Imprimir();
+            }
+        }
+
+        internal static void ListarProfessores()
+        {
+            foreach (Professor prof in listaProfessores)
+            {
+                prof.Imprimir();
+            }
         }
 
 

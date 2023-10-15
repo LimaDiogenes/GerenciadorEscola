@@ -25,6 +25,7 @@ internal class Disciplina
         {
             Professores.Add(professor);
             professor.AdicionarDisciplina(this);
+            professor.Disciplinas.Add(this);
         }
     }
     /// <summary>
@@ -38,5 +39,16 @@ internal class Disciplina
             return Professores[0].Nome;
         }
         return "Nenhum Professor";
+    }
+
+    internal void Imprimir()
+    {
+        Console.WriteLine($"Título: {Titulo}, Carga horária: {CargaHoraria}");
+        Console.WriteLine($"Ementa: {Ementa}");
+        foreach (Professor p in Professores)
+        {
+            Console.WriteLine($"Professor(a): {p.Nome}");
+        }
+        Console.WriteLine("=====================================");
     }
 }

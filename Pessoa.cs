@@ -28,12 +28,12 @@
 
         internal virtual void Imprimir()
         {
-            Console.WriteLine($"Matrícula: {Matricula}");
-            Console.WriteLine($"Nome: {Nome}");
-            Console.WriteLine($"Data de nascimento: {DataNascimento.Day/DataNascimento.Month/DataNascimento.Year}");
-            Console.WriteLine($"Idade: {Idade}");
+            Console.WriteLine($"Matrícula: {Matricula}, Nome: {Nome}");            
+            Console.WriteLine($"Idade: {Idade}, Data de nascimento: {DataNascimento.Day}/{DataNascimento.Month}/{DataNascimento.Year}");
             if (Status)
-            Console.WriteLine($"Status: Ativo");
+            {
+                Console.WriteLine($"Status: Ativo");
+            }
             else
             {
                 Console.WriteLine($"Status: Inativo");
