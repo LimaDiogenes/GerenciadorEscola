@@ -51,6 +51,7 @@ internal class Curso
     /// Calcula a carga horária total do curso, somando as cargas horárias de todas as disciplinas do curso.
     /// </summary>
     /// <returns>A carga horária total do curso em horas.</returns>
+    
     internal int ObterCargaHorariaTotal()
     {
         int cargaHorariaTotal = 0;
@@ -65,6 +66,7 @@ internal class Curso
     /// Obtém o nome do professor do primeiro registro de disciplina do curso, se houver alguma disciplina.
     /// </summary>
     /// <returns>O nome do professor ou "Nenhum Professor" se não houver disciplinas ou vários professores diferentes.</returns>
+    
     internal string ObterNomeDoProfessor()
     {
         if (Disciplinas.Count > 0)
@@ -82,6 +84,7 @@ internal class Curso
         return "Nenhum Professor";
 
     }
+
     internal bool Descontar10(Pessoa pessoa)
     {
         DateTime hoje = DateTime.Now;
@@ -96,8 +99,8 @@ internal class Curso
 
     internal void Imprimir()
     {
-        Console.WriteLine($"Código do curso: {Codigo}, Nome do curso: {Nome}");
-        Console.WriteLine($"Valor da mensalidade: {Math.Round(Mensalidade,2)}");
-        Console.WriteLine("------------------------------------------");
+        Console.WriteLine($"Código do curso: {Codigo}, Curso do aluno: {Nome}");
+        Console.WriteLine($"Valor da mensalidade: {Math.Round(Mensalidade,2)}");        
+        Console.WriteLine();
     }
 }

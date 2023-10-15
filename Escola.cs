@@ -58,8 +58,21 @@
             }
         }
 
+        internal static void ListarCursos()
+        {
+            foreach (Curso curso in listaCursos)
+            {
+                curso.Imprimir();
+            }
+        }
 
-
+        internal static void ListarDisciplinas()
+        {
+            foreach (Disciplina disc in listaDisciplinas)
+            {
+                disc.Imprimir();
+            }
+        }
     }
 }
 

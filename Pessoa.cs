@@ -8,11 +8,12 @@
         internal int Idade { get; set; }
         internal bool Status { get; set; }
 
-        internal Pessoa(int matricula, string nome, DateTime dataNascimento)
+        internal Pessoa(int matricula, string nome, DateTime dataNascimento, bool status = true)
         {
             DataNascimento = dataNascimento;
             Matricula = matricula;
             Nome = nome;
+            Status = status;
 
             DateTime hoje = DateTime.Now;
             Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
@@ -30,13 +31,15 @@
         {
             Console.WriteLine($"Matrícula: {Matricula}, Nome: {Nome}");            
             Console.WriteLine($"Idade: {Idade}, Data de nascimento: {DataNascimento.Day}/{DataNascimento.Month}/{DataNascimento.Year}");
+            
             if (Status)
             {
                 Console.WriteLine($"Status: Ativo");
             }
+
             else
             {
-                Console.WriteLine($"Status: Inativo");
+                Console.WriteLine($"Status: Desistente");
             }
         }
 
@@ -48,18 +51,16 @@
             Status = status;
             DateTime hoje = DateTime.Now;
             Idade = hoje.Year - dataNascimento.Year; // calcula quantos anos se passaram desde o nascimento                       
+            
             if (hoje.Month < DataNascimento.Month) // compara mes com o aniv. Se não tiver chegado ao mes de aniversario, diminui 1 ano da idade
             {
                 Idade--;
             }
+            
             if (hoje.Month == DataNascimento.Month && hoje.Day < DataNascimento.Day) // se estiver no mesmo mes, compara os dias para saber se ja fez aniversario
             {
                 Idade--; // caso ainda não fez, diminui 1 da idade
             }
         }
-
-
-
-
     }
 }

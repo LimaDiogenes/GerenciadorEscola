@@ -25,13 +25,22 @@ internal class Disciplina
         {
             Professores.Add(professor);
             professor.AdicionarDisciplina(this);
-            professor.Disciplinas.Add(this);
+            
+            foreach (Curso curso in Escola.listaCursos)
+            {
+                if (curso.Disciplinas.Contains(this))
+                {
+                    professor.AdicionarCurso(curso);
+                }
+            }
         }
     }
+   
     /// <summary>
     /// Obtém o nome do primeiro professor associado a esta disciplina, se houver algum.
     /// </summary>
     /// <returns>O nome do professor ou "Nenhum Professor" se não houver professores associados.</returns>
+   
     public string ObterNomeDoProfessor()
     {
         if (Professores.Count > 0)
@@ -45,10 +54,13 @@ internal class Disciplina
     {
         Console.WriteLine($"Título: {Titulo}, Carga horária: {CargaHoraria}");
         Console.WriteLine($"Ementa: {Ementa}");
+        
         foreach (Professor p in Professores)
         {
             Console.WriteLine($"Professor(a): {p.Nome}");
         }
+
         Console.WriteLine("=====================================");
+        Console.WriteLine();
     }
 }
