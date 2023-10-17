@@ -1,20 +1,20 @@
 ﻿namespace GerenciadorEscola
 {
-    static internal class Escola
+    internal class Escola
     {
         //  lista de alunos
-        internal static List<Aluno> listaAlunos {get; set;}
+        internal List<Aluno> listaAlunos {get; set;}
 
         // lista de cursos
-        internal static List<Curso> listaCursos { get; set; }
+        internal List<Curso> listaCursos { get; set; }
 
         //  lista de disciplinas
-        internal static List<Disciplina> listaDisciplinas { get; set; }
+        internal List<Disciplina> listaDisciplinas { get; set; }
 
         //  lista de professores
-        internal static List<Professor> listaProfessores { get; set; }
+        internal List<Professor> listaProfessores { get; set; }
 
-        internal static void Init()
+        internal Escola()
         {
             listaAlunos = new();
             listaCursos = new();
@@ -22,27 +22,27 @@
             listaProfessores = new();
         }
 
-        internal static void CadastrarAluno(Aluno aluno)
+        internal void CadastrarAluno(Aluno aluno)
         {
             listaAlunos.Add(aluno);
         }
 
-        internal static void CadastrarProfessor(Professor professor)
+        internal void CadastrarProfessor(Professor professor)
         {
             listaProfessores.Add(professor);
         }
 
-        internal static void CadastrarCurso(Curso curso)
+        internal void CadastrarCurso(Curso curso)
         {
             listaCursos.Add(curso);
         }
 
-        internal static void CadastrarDisciplina(Disciplina disc)
+        internal void CadastrarDisciplina(Disciplina disc)
         {
             listaDisciplinas.Add(disc);
         }
 
-        internal static void ListarAlunos()
+        internal void ListarAlunos()
         {
             foreach (Aluno aluno in  listaAlunos)
             {                
@@ -50,7 +50,7 @@
             }
         }
 
-        internal static void ListarProfessores()
+        internal void ListarProfessores()
         {
             foreach (Professor prof in listaProfessores)
             {
@@ -58,7 +58,7 @@
             }
         }
 
-        internal static void ListarCursos()
+        internal void ListarCursos()
         {
             foreach (Curso curso in listaCursos)
             {
@@ -66,7 +66,7 @@
             }
         }
 
-        internal static void ListarDisciplinas()
+        internal void ListarDisciplinas()
         {
             foreach (Disciplina disc in listaDisciplinas)
             {

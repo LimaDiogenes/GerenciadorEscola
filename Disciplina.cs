@@ -26,7 +26,7 @@ internal class Disciplina
             Professores.Add(professor);
             professor.AdicionarDisciplina(this);
             
-            foreach (Curso curso in Escola.listaCursos)
+            foreach (Curso curso in professor.Escola.listaCursos)
             {
                 if (curso.Disciplinas.Contains(this))
                 {
