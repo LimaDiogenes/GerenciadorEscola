@@ -4,20 +4,20 @@
     {
         internal static void Main()
         {
-            Escola.Init();
+            Escola e1 = new();
 
             // Criando três alunos
             Aluno aluno1 = new Aluno(123456, "Joao", new DateTime(1999, 7, 5));
             aluno1.DefinirStatus(false);
-            Escola.CadastrarAluno(aluno1);
+            e1.CadastrarAluno(aluno1);
 
             Aluno aluno2 = new Aluno(758962, "Maria", new DateTime(2005, 5, 12));
             aluno2.DefinirStatus(true);
-            Escola.CadastrarAluno(aluno2);
+            e1.CadastrarAluno(aluno2);
 
             Aluno aluno3 = new Aluno(123456, "Pedro", new DateTime(2000, DateTime.Now.Month, DateTime.Now.Day));
             aluno3.DefinirStatus(true);
-            Escola.CadastrarAluno(aluno3);
+            e1.CadastrarAluno(aluno3);
 
             // Criando duas disciplinas
             Disciplina disciplina1 = new Disciplina
@@ -56,11 +56,11 @@
             };
 
             // Criando três professores
-            Professor professor1 = new Professor(789532, "Helena", new DateTime(1985, 10, 5), 6000.00);
+            Professor professor1 = new Professor(789532, "Helena", new DateTime(1985, 10, 5), 6000.00, e1);
 
-            Professor professor2 = new Professor(586723, "Carlos", new DateTime(1990, 6, 1), 6000.00);
+            Professor professor2 = new Professor(586723, "Carlos", new DateTime(1990, 6, 1), 6000.00, e1);
 
-            Professor professor3 = new Professor(586723, "Anna", new DateTime(1999, 12, 5), 15000.00);
+            Professor professor3 = new Professor(586723, "Anna", new DateTime(1999, 12, 5), 15000.00, e1);
 
             // Criando três cursos
             Curso curso1 = new Curso("Ciência da Computação", "CC01", 5000);
@@ -82,21 +82,21 @@
             curso3.AdicionarAluno(aluno3);
 
             // Adicionando as disciplinas à lista
-            Escola.CadastrarDisciplina(disciplina1);
-            Escola.CadastrarDisciplina(disciplina2);
-            Escola.CadastrarDisciplina(disciplina3);
-            Escola.CadastrarDisciplina(disciplina4);
-            Escola.CadastrarDisciplina(disciplina5);
+            e1.CadastrarDisciplina(disciplina1);
+            e1.CadastrarDisciplina(disciplina2);
+            e1.CadastrarDisciplina(disciplina3);
+            e1.CadastrarDisciplina(disciplina4);
+            e1.CadastrarDisciplina(disciplina5);
 
             // cadastrando cursos na lista
-            Escola.CadastrarCurso(curso1);
-            Escola.CadastrarCurso(curso2);
-            Escola.CadastrarCurso(curso3);
+            e1.CadastrarCurso(curso1);
+            e1.CadastrarCurso(curso2);
+            e1.CadastrarCurso(curso3);
 
             // cadastrando professores na Escola
-            Escola.CadastrarProfessor(professor1);
-            Escola.CadastrarProfessor(professor2);
-            Escola.CadastrarProfessor(professor3);
+            e1.CadastrarProfessor(professor1);
+            e1.CadastrarProfessor(professor2);
+            e1.CadastrarProfessor(professor3);
 
             // atribuindo professores a cada disciplina
             disciplina1.AtribuirProfessor(professor1);
@@ -112,13 +112,13 @@
 
             // Imprimindo alunos e disciplinas
             Console.WriteLine("                                                             Lista de alunos\n");
-            Escola.ListarAlunos();
+            e1.ListarAlunos();
             Console.WriteLine("\n                                                           Lista de professores\n");
-            Escola.ListarProfessores();
+            e1.ListarProfessores();
             Console.WriteLine("\n                                                           Lista de cursos\n");
-            Escola.ListarCursos();
+            e1.ListarCursos();
             Console.WriteLine("\n                                                           Lista de disciplinas\n");
-            Escola.ListarDisciplinas();
+            e1.ListarDisciplinas();
 
         }
     }

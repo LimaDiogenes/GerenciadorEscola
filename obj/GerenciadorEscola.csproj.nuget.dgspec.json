@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\vsprojects\\2modulo\\GerenciadorEscola\\ProjetoFinal\\ProjetoFinal_Diogenes\\GerenciadorEscola.csproj": {}
+    "F:\\vsprojects\\teste gerescola\\GerenciadorEscola.csproj": {}
   },
   "projects": {
-    "F:\\vsprojects\\2modulo\\GerenciadorEscola\\ProjetoFinal\\ProjetoFinal_Diogenes\\GerenciadorEscola.csproj": {
+    "F:\\vsprojects\\teste gerescola\\GerenciadorEscola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\vsprojects\\2modulo\\GerenciadorEscola\\ProjetoFinal\\ProjetoFinal_Diogenes\\GerenciadorEscola.csproj",
+        "projectUniqueName": "F:\\vsprojects\\teste gerescola\\GerenciadorEscola.csproj",
         "projectName": "GerenciadorEscola",
-        "projectPath": "F:\\vsprojects\\2modulo\\GerenciadorEscola\\ProjetoFinal\\ProjetoFinal_Diogenes\\GerenciadorEscola.csproj",
+        "projectPath": "F:\\vsprojects\\teste gerescola\\GerenciadorEscola.csproj",
         "packagesPath": "C:\\Users\\diord\\.nuget\\packages\\",
-        "outputPath": "F:\\vsprojects\\2modulo\\GerenciadorEscola\\ProjetoFinal\\ProjetoFinal_Diogenes\\obj\\",
+        "outputPath": "F:\\vsprojects\\teste gerescola\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

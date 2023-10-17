@@ -26,7 +26,7 @@ internal class Disciplina
             Professores.Add(professor);
             professor.AdicionarDisciplina(this);
             
-            foreach (Curso curso in Escola.listaCursos)
+            foreach (Curso curso in professor.Escola.listaCursos)
             {
                 if (curso.Disciplinas.Contains(this))
                 {
@@ -41,7 +41,7 @@ internal class Disciplina
     /// </summary>
     /// <returns>O nome do professor ou "Nenhum Professor" se não houver professores associados.</returns>
    
-    public string ObterNomeDoProfessor()
+    internal string ObterNomeDoProfessor()
     {
         if (Professores.Count > 0)
         {
