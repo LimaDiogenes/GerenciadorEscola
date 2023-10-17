@@ -7,7 +7,7 @@ namespace GerenciadorEscola
         internal List<Curso> Cursos { get; set; }
         internal Escola Escola { get; set; }
 
-        public Professor(int matricula, string nome, DateTime dataNascimento, double salario, Escola escola) : base(matricula, nome, dataNascimento)
+        internal Professor(int matricula, string nome, DateTime dataNascimento, double salario, Escola escola) : base(matricula, nome, dataNascimento)
         {
             Escola = escola;
             Matricula = matricula;
